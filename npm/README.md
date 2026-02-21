@@ -2,7 +2,7 @@
 
 CLI for [FormHandle](https://formhandle.dev) — form submissions as email.
 
-FormHandle is a serverless form submission API. Add a script tag to your site, and form submissions are forwarded as emails. This CLI wraps the API into a clean developer workflow.
+FormHandle is a serverless form submission API. Point your form's `action` at your endpoint, and submissions are forwarded as emails. No script tags required. This CLI wraps the API into a clean developer workflow.
 
 ## Quick Start
 

@@ -11,9 +11,9 @@ export async function snippet(ctx: CLIContext): Promise<void> {
 
   const { domain, endpoint } = resolveEndpoint(config, ctx.flags.domain);
 
-  const scriptTag = `<script src="https://api.formhandle.dev/s/${endpoint.handler_id}.js"></script>`;
+  const actionUrl = `https://api.formhandle.dev/submit/${endpoint.handler_id}`;
 
-  const formHtml = `<form data-formhandle>
+  const formHtml = `<form action="${actionUrl}" method="POST">
   <input type="text" name="name" placeholder="Name" required>
   <input type="email" name="email" placeholder="Email" required>
   <textarea name="message" placeholder="Message" required></textarea>
@@ -24,7 +24,7 @@ export async function snippet(ctx: CLIContext): Promise<void> {
     jsonOut({
       domain,
       handler_id: endpoint.handler_id,
-      script_tag: scriptTag,
+      action_url: actionUrl,
       form_html: formHtml,
     });
     return;
@@ -32,18 +32,10 @@ export async function snippet(ctx: CLIContext): Promise<void> {
 
   heading(`Snippet for ${domain}`);
 
-  console.log(dim('Add this script tag to your page:'));
-  console.log();
-  console.log(`  ${scriptTag}`);
-  console.log();
-  console.log(dim('Example form:'));
+  console.log(dim('Add this form to your page:'));
   console.log();
   for (const line of formHtml.split('\n')) {
     console.log(`  ${line}`);
   }
-  console.log();
-  console.log(dim('Attributes:'));
-  console.log(`  data-formhandle-success="…"  ${dim('Custom success message')}`);
-  console.log(`  data-formhandle-error="…"    ${dim('Custom error message')}`);
   console.log();
 }
