@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+require_once __DIR__ . '/../src/Output.php';
+require_once __DIR__ . '/../src/Api.php';
+require_once __DIR__ . '/../src/Config.php';
+require_once __DIR__ . '/../src/Prompt.php';
+require_once __DIR__ . '/../src/Commands/Init.php';
+require_once __DIR__ . '/../src/Commands/Resend.php';
+require_once __DIR__ . '/../src/Commands/Status.php';
+require_once __DIR__ . '/../src/Commands/Cancel.php';
+require_once __DIR__ . '/../src/Commands/Snippet.php';
+require_once __DIR__ . '/../src/Commands/Test.php';
+require_once __DIR__ . '/../src/Commands/Whoami.php';
+require_once __DIR__ . '/../src/Commands/Open.php';
+require_once __DIR__ . '/../src/Cli.php';
+
+FormHandle\Cli::run(array_slice($argv, 1));

@@ -1,0 +1,36 @@
+{
+  "name": "formhandle-rescript",
+  "version": "0.1.0",
+  "description": "CLI for FormHandle — form submissions as email (ReScript)",
+  "license": "MIT",
+  "bin": {
+    "formhandle-res": "src/Main.res.mjs"
+  },
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "rescript build",
+    "clean": "rescript clean",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "form",
+    "email",
+    "serverless",
+    "cli",
+    "rescript"
+  ],
+  "homepage": "https://formhandle.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ParapluOU/formhandle-examples"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "rescript": "^11.0.0"
+  }
+}

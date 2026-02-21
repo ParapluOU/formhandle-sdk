@@ -1,0 +1,8 @@
+{
+  "aliases": {
+    "formhandle": {
+      "script-ref": "src/main/java/dev/formhandle/cli/Main.java",
+      "description": "CLI for FormHandle — form submissions as email"
+    }
+  }
+}

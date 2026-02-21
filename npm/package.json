@@ -1,0 +1,35 @@
+{
+  "name": "formhandle",
+  "version": "0.1.0",
+  "description": "CLI for FormHandle — form submissions as email",
+  "bin": {
+    "formhandle": "bin/index.js"
+  },
+  "files": [
+    "bin/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"const fs=require('fs');const f='bin/index.js';const c=fs.readFileSync(f,'utf8');fs.writeFileSync(f,'#!/usr/bin/env node\\n'+c);\" && chmod +x bin/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "form",
+    "email",
+    "formhandle",
+    "serverless",
+    "cli"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ParapluOU/formhandle-examples"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.0.0"
+  }
+}

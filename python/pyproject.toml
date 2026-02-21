@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "formhandle"
+version = "0.1.0"
+description = "CLI for FormHandle — form submissions as email"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [{ name = "FormHandle", email = "hello@formhandle.dev" }]
+keywords = ["form", "email", "serverless", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+[project.urls]
+Homepage = "https://formhandle.dev"
+Documentation = "https://formhandle.dev"
+Repository = "https://github.com/ParapluOU/formhandle-examples"
+
+[project.scripts]
+formhandle = "formhandle.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

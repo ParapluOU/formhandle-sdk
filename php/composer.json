@@ -1,0 +1,26 @@
+{
+    "name": "formhandle/formhandle",
+    "description": "CLI for FormHandle — form submissions as email",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": ["form", "email", "serverless", "cli"],
+    "homepage": "https://formhandle.dev",
+    "authors": [
+        {
+            "name": "FormHandle",
+            "email": "hello@formhandle.dev"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FormHandle\\": "src/"
+        }
+    },
+    "bin": ["bin/formhandle"]
+}
